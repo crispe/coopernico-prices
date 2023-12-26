@@ -1,22 +1,8 @@
 # coopernico-prices
 Pulls coopernico Portuguese electricity energy provider prices into Home Assistant.
 
-Add the following to your configuration.yaml:
-
-sensor:
-  - platform: rest
-    name: Coopernico Prices
-    unique_id: coopernico_prices
-    resource: http://coopernico.home-assistant.live/egetprices.php
-    scan_interval: 3600
-    verify_ssl: false
-    unit_of_measurement: "EUR/kWh"
-    value_template: >
-        {{value_json.current_price}}
-    json_attributes:
-      - Prices
-      - current_price
-
+# Setting up
+1- Copy the yaml code from the coopernico.yaml file into your configuration.yaml.
 
 
 
