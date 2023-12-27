@@ -6,6 +6,11 @@ sensor:
     scan_interval: 3600
     verify_ssl: false
     unit_of_measurement: "EUR/kWh"
+    params:
+      ciclo:
+        dia
+      contador:
+        bi
     value_template: >
         {{value_json.current_price}}
     json_attributes:
