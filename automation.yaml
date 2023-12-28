@@ -1,0 +1,17 @@
+alias: UpdateCoopernicoPrices
+description: ""
+trigger:
+  - platform: time_pattern
+    minutes: /5
+condition: []
+action:
+  - service: homeassistant.update_entity
+    data: {}
+    target:
+      entity_id: sensor.coopernico_prices
+  - service: homeassistant.update_entity
+    data: {}
+    target:
+      entity_id: sensor.coopernico_injection
+mode: single
+
